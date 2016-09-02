@@ -8,18 +8,15 @@
 <h1 style="text-align: center; color: orchid; margin-top: 1%">Travel Travel World</h1>
 
 <!-- call the main module (app = variable), defined as (value = World Wide Travel) in app.js ng-app is a directive that specifies a module-->
-<div ng-controller="bookCtrl">
-<div ng-repeat= "book in Books"><div class="panel panel-danger col-md-4"><div class="panel-heading">{{book.type}}</div><div class="panel-body"><h5>{{book.title}}</h5><h5>${{book.price}}</h5></div></div>
+<!-- <div ng-controller="bookCtrl"> -->
+      <div class="row">
+        <div class="col-xs-12" ng-view></div> <!-- directive that allows routing, will inject things into and out of the div, url will look as if we are changing pages, but we're injecting partials instead need hashMarks in routes (#/items/new = route) -->
+    </div>
+<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
-</div>
-
-
-<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/factories/guideFactory.js"></script>
 <script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
