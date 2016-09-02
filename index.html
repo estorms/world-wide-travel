@@ -5,24 +5,31 @@
   <link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body ng-app="World Wide Travel">
-<!-- call the main module (app = variable), defined as (value = World Wide Travel) in app.js -->
+<h1 style="text-align: center; color: orchid">Travel That Bad-Ass World</h1>
 
-</body>
-</html>
+<!-- call the main module (app = variable), defined as (value = World Wide Travel) in app.js ng-app is a directive that specifies a module-->
+<div ng-controller="bookCtrl">
+<div ng-repeat= "book in Books"><div class="panel panel-danger col-md-4"><div class="panel-heading">{{book.type}}</div><div class="panel-body"><h5>{{book.title}}</h5><h5>${{book.price}}</h5></div></div>
 
-<div class="panel panel-danger col-md-4">
+
+</div>
+
+
+
+<!-- <div class="panel panel-danger col-md-4">
   <div class="panel-heading">Joe's Delightful Travel Guides</div>
   <div class="panel-body">
     <h5>Type</h5>
     <h5>Title</h5>
     <h5>Price</h5>
   </div>
-</div>
-
+</div> -->
 
 <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="/app/app.js"></script>
-<script type="text/javascript" src="/app/controllers/bookCtrl.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
+</body>
+</html>
